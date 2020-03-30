@@ -9,9 +9,12 @@ use yii\db\Migration;
 
 class m180824_090744_create_notification_table extends Migration
 {
+
+    public $table = '{{%notification}}';
+
     public function up()
     {
-        $this->createTable('notification', [
+        $this->createTable($this->table, [
             'id' => $this->primaryKey(),
             'level' => $this->string(),
             'notifiable_type' => $this->string(),
@@ -22,13 +25,13 @@ class m180824_090744_create_notification_table extends Migration
             'created_at' => $this->timestamp()->defaultExpression('CURRENT_TIMESTAMP'),
             'updated_at' => $this->timestamp()->null(),
         ]);
-        $this->createIndex('notifiable', 'notification', ['notifiable_type', 'notifiable_id']);
+        $this->createIndex('notifiable', $this->table, ['notifiable_type', 'notifiable_id']);
     }
 
     public function down()
     {
-        $this->dropIndex('notifiable', 'notification');
-        $this->dropTable('notification');
+        $this->dropIndex('notifiable', $this->table);
+        $this->dropTable($this->table);
     }
 
 }
