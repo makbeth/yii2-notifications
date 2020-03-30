@@ -1,6 +1,6 @@
 {
   "name": "makbeth/yii2-notifications",
-  "description": "The extension provides support for sending notifications across a variety of delivery channels, including mail, SMS, Slack etc. Notifications may also be stored in a database so they may be displayed in your web interface.",
+  "description": "The extension provides support for sending notifications across a variety of delivery channels, including mail, SMS, Slack etc. Notifications may also be stored in a database so they may be displayed in your web interface. In this version issue with the table name has been fixed",
   "type": "yii2-extension",
   "keywords": ["yii", "yii2", "notifications", "sms", "email", "slack", "tamarin", "transactional messages"],
   "homepage": "https://github.com/makbeth/yii2-notifications",
