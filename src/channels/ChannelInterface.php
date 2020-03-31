@@ -3,10 +3,10 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\channels;
+namespace makbeth\notifications\channels;
 
-use tuyakhov\notifications\NotifiableInterface;
-use tuyakhov\notifications\NotificationInterface;
+use makbeth\notifications\NotifiableInterface;
+use makbeth\notifications\NotificationInterface;
 
 interface ChannelInterface
 {

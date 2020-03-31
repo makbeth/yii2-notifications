@@ -2,7 +2,7 @@
 /**
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
-namespace tuyakhov\notifications\tests;
+namespace makbeth\notifications\tests;
 
 use yii\console\Application;
 

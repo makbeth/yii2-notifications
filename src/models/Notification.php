@@ -1,11 +1,11 @@
 <?php
 
 
-namespace tuyakhov\notifications\models;
+namespace makbeth\notifications\models;
 
 
-use tuyakhov\notifications\behaviors\ReadableBehavior;
-use tuyakhov\notifications\messages\DatabaseMessage;
+use makbeth\notifications\behaviors\ReadableBehavior;
+use makbeth\notifications\messages\DatabaseMessage;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\db\Expression;

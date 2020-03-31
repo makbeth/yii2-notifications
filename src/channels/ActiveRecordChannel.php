@@ -3,12 +3,12 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\channels;
+namespace makbeth\notifications\channels;
 
 
-use tuyakhov\notifications\messages\DatabaseMessage;
-use tuyakhov\notifications\NotifiableInterface;
-use tuyakhov\notifications\NotificationInterface;
+use makbeth\notifications\messages\DatabaseMessage;
+use makbeth\notifications\NotifiableInterface;
+use makbeth\notifications\NotificationInterface;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
 use yii\db\BaseActiveRecord;
@@ -19,7 +19,7 @@ class ActiveRecordChannel extends Component implements ChannelInterface
     /**
      * @var BaseActiveRecord|string
      */
-    public $model = 'tuyakhov\notifications\models\Notification';
+    public $model = 'makbeth\notifications\models\Notification';
 
     public function send(NotifiableInterface $recipient, NotificationInterface $notification)
     {

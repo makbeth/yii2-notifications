@@ -3,7 +3,7 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications;
+namespace makbeth\notifications;
 
 
 interface NotifiableInterface

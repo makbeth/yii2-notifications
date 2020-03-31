@@ -5,7 +5,7 @@
  * @license http://www.stombox.com/license/
  */
 
-namespace tuyakhov\notifications\messages;
+namespace makbeth\notifications\messages;
 
 
 class SmsMessage extends AbstractMessage

@@ -3,11 +3,11 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\tests;
+namespace makbeth\notifications\tests;
 
 
-use tuyakhov\notifications\channels\TelegramChannel;
-use tuyakhov\notifications\messages\TelegramMessage;
+use makbeth\notifications\channels\TelegramChannel;
+use makbeth\notifications\messages\TelegramMessage;
 use yii\httpclient\Client;
 use yii\httpclient\Request;
 
@@ -15,7 +15,7 @@ class TelegramChannelTest extends TestCase
 {
     public function testSend()
     {
-        $recipient = $this->createMock('tuyakhov\notifications\NotifiableInterface');
+        $recipient = $this->createMock('makbeth\notifications\NotifiableInterface');
         $recipient->expects($this->once())
             ->method('routeNotificationFor')
             ->with('telegram')
@@ -37,7 +37,7 @@ class TelegramChannelTest extends TestCase
             'httpClient' => $client
         ]);
 
-        $notification = $this->createMock('tuyakhov\notifications\NotificationInterface');
+        $notification = $this->createMock('makbeth\notifications\NotificationInterface');
         $notification->expects($this->once())
             ->method('exportFor')
             ->with('telegram')

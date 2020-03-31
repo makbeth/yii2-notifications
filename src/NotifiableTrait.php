@@ -3,10 +3,10 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications;
+namespace makbeth\notifications;
 
 
-use tuyakhov\notifications\models\Notification;
+use makbeth\notifications\models\Notification;
 use yii\db\BaseActiveRecord;
 use yii\helpers\Inflector;
 

@@ -2,11 +2,11 @@
 /**
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
-namespace tuyakhov\notifications\channels;
+namespace makbeth\notifications\channels;
 
-use tuyakhov\notifications\messages\SmsMessage;
-use tuyakhov\notifications\NotifiableInterface;
-use tuyakhov\notifications\NotificationInterface;
+use makbeth\notifications\messages\SmsMessage;
+use makbeth\notifications\NotifiableInterface;
+use makbeth\notifications\NotificationInterface;
 use yii\base\Component;
 use yii\di\Instance;
 use yii\httpclient\Client;
@@ -18,10 +18,10 @@ use yii\httpclient\Client;
  * [
  *      'components' => [
  *          'notifier' => [
- *              'class' => '\tuyakhov\notifications\Notifier',
+ *              'class' => '\makbeth\notifications\Notifier',
  *              'channels' => [
  *                  'sms' => [
- *                      'class' => '\tuyakhov\notifications\channels\TwilioChannel,
+ *                      'class' => '\makbeth\notifications\channels\TwilioChannel,
  *                      'accountSid' => '...',
  *                      'authToken' => '...',
  *                      'from' => '+1234567890'

@@ -3,7 +3,7 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\behaviors;
+namespace makbeth\notifications\behaviors;
 
 
 use yii\base\Behavior;

@@ -3,11 +3,11 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\tests;
+namespace makbeth\notifications\tests;
 
 
-use tuyakhov\notifications\channels\TwilioChannel;
-use tuyakhov\notifications\messages\SmsMessage;
+use makbeth\notifications\channels\TwilioChannel;
+use makbeth\notifications\messages\SmsMessage;
 use yii\httpclient\Client;
 use yii\httpclient\Request;
 
@@ -16,7 +16,7 @@ class TwilioChannelTest extends TestCase
 
     public function testSend()
     {
-        $recipient = $this->createMock('tuyakhov\notifications\NotifiableInterface');
+        $recipient = $this->createMock('makbeth\notifications\NotifiableInterface');
         $recipient->expects($this->once())
             ->method('routeNotificationFor')
             ->with('sms')
@@ -37,7 +37,7 @@ class TwilioChannelTest extends TestCase
             'httpClient' => $client
         ]);
 
-        $notification = $this->createMock('tuyakhov\notifications\NotificationInterface');
+        $notification = $this->createMock('makbeth\notifications\NotificationInterface');
         $notification->expects($this->once())
             ->method('exportFor')
             ->with('sms')

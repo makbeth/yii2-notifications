@@ -3,11 +3,11 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\channels;
+namespace makbeth\notifications\channels;
 
-use tuyakhov\notifications\NotifiableInterface;
-use tuyakhov\notifications\NotificationInterface;
-use tuyakhov\notifications\messages\TelegramMessage;
+use makbeth\notifications\NotifiableInterface;
+use makbeth\notifications\NotificationInterface;
+use makbeth\notifications\messages\TelegramMessage;
 use yii\base\Component;
 use yii\base\InvalidArgumentException;
 use yii\base\InvalidConfigException;

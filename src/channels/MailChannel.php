@@ -2,12 +2,12 @@
 /**
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
-namespace tuyakhov\notifications\channels;
+namespace makbeth\notifications\channels;
 
 
-use tuyakhov\notifications\messages\MailMessage;
-use tuyakhov\notifications\NotifiableInterface;
-use tuyakhov\notifications\NotificationInterface;
+use makbeth\notifications\messages\MailMessage;
+use makbeth\notifications\NotifiableInterface;
+use makbeth\notifications\NotificationInterface;
 use yii\base\Component;
 use yii\di\Instance;
 use yii\mail\MailerInterface;

@@ -3,11 +3,11 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\events;
+namespace makbeth\notifications\events;
 
 
-use tuyakhov\notifications\NotifiableInterface;
-use tuyakhov\notifications\NotificationInterface;
+use makbeth\notifications\NotifiableInterface;
+use makbeth\notifications\NotificationInterface;
 use yii\base\Event;
 
 class NotificationEvent extends Event

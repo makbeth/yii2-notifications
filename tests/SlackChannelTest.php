@@ -3,18 +3,18 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\tests;
+namespace makbeth\notifications\tests;
 
 
-use tuyakhov\notifications\channels\SlackChannel;
-use tuyakhov\notifications\messages\SlackMessage;
+use makbeth\notifications\channels\SlackChannel;
+use makbeth\notifications\messages\SlackMessage;
 use yii\httpclient\Client;
 
 class SlackChannelTest
 {
     public function testSend()
     {
-        $recipient = $this->createMock('tuyakhov\notifications\NotifiableInterface');
+        $recipient = $this->createMock('makbeth\notifications\NotifiableInterface');
         $recipient->expects($this->once())
             ->method('routeNotificationFor')
             ->with('slack')
@@ -34,7 +34,7 @@ class SlackChannelTest
             'httpClient' => $client
         ]);
 
-        $notification = $this->createMock('tuyakhov\notifications\NotificationInterface');
+        $notification = $this->createMock('makbeth\notifications\NotificationInterface');
         $notification->expects($this->once())
             ->method('exportFor')
             ->with('slack')

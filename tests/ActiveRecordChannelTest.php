@@ -3,11 +3,11 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\tests;
+namespace makbeth\notifications\tests;
 
 
-use tuyakhov\notifications\messages\DatabaseMessage;
-use tuyakhov\notifications\models\Notification;
+use makbeth\notifications\messages\DatabaseMessage;
+use makbeth\notifications\models\Notification;
 use yii\console\Application;
 
 class ActiveRecordChannelTest extends TestCase
@@ -19,7 +19,7 @@ class ActiveRecordChannelTest extends TestCase
             'id' => 'test-app',
             'basePath' => __DIR__,
             'aliases' => [
-                '@tuyakhov/notifications/migrations' => dirname(__DIR__) . '/src/migrations',
+                '@makbeth/notifications/migrations' => dirname(__DIR__) . '/src/migrations',
             ],
             'controllerNamespace' => 'yii\console\controllers',
             'components' => [
@@ -34,7 +34,7 @@ class ActiveRecordChannelTest extends TestCase
                     'compact' => true,
                     'interactive' => false,
                     'migrationNamespaces' => [
-                        'tuyakhov\notifications\migrations'
+                        'makbeth\notifications\migrations'
                     ],
                 ],
             ],
@@ -51,7 +51,7 @@ class ActiveRecordChannelTest extends TestCase
 
     public function testSend()
     {
-        $recipient = $this->createMock('tuyakhov\notifications\NotifiableInterface');
+        $recipient = $this->createMock('makbeth\notifications\NotifiableInterface');
         $recipient->expects($this->once())
             ->method('routeNotificationFor')
             ->with('database')
@@ -65,7 +65,7 @@ class ActiveRecordChannelTest extends TestCase
         ]);
 
         $channel = \Yii::createObject([
-            'class' => 'tuyakhov\notifications\channels\ActiveRecordChannel',
+            'class' => 'makbeth\notifications\channels\ActiveRecordChannel',
             'model' => function () use ($message) {
                 $notificationModel = $this->createMock('yii\db\BaseActiveRecord');
                 $notificationModel->method('load')->willReturn(true);
@@ -86,7 +86,7 @@ class ActiveRecordChannelTest extends TestCase
             },
         ]);
 
-        $notification = $this->createMock('tuyakhov\notifications\NotificationInterface');
+        $notification = $this->createMock('makbeth\notifications\NotificationInterface');
         $notification->expects($this->once())
             ->method('exportFor')
             ->with('database')
@@ -97,7 +97,7 @@ class ActiveRecordChannelTest extends TestCase
 
     public function testWithDB()
     {
-        $recipient = $this->createMock('tuyakhov\notifications\NotifiableInterface');
+        $recipient = $this->createMock('makbeth\notifications\NotifiableInterface');
         $recipient->expects($this->atLeastOnce())
             ->method('routeNotificationFor')
             ->with('database')
@@ -111,10 +111,10 @@ class ActiveRecordChannelTest extends TestCase
         ]);
 
         $channel = \Yii::createObject([
-            'class' => 'tuyakhov\notifications\channels\ActiveRecordChannel',
+            'class' => 'makbeth\notifications\channels\ActiveRecordChannel',
         ]);
 
-        $notification = $this->createMock('tuyakhov\notifications\NotificationInterface');
+        $notification = $this->createMock('makbeth\notifications\NotificationInterface');
         $notification->expects($this->once())
             ->method('exportFor')
             ->with('database')
@@ -132,7 +132,7 @@ class ActiveRecordChannelTest extends TestCase
             'body' => $body,
             'data' => ['actionUrl' => $actionUrl]
         ]);
-        $anotherNotification = $this->createMock('tuyakhov\notifications\NotificationInterface');
+        $anotherNotification = $this->createMock('makbeth\notifications\NotificationInterface');
         $anotherNotification->expects($this->once())
             ->method('exportFor')
             ->with('database')

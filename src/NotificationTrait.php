@@ -3,9 +3,9 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications;
+namespace makbeth\notifications;
 
-use tuyakhov\notifications\messages\AbstractMessage;
+use makbeth\notifications\messages\AbstractMessage;
 use yii\helpers\Inflector;
 
 trait NotificationTrait
@@ -34,7 +34,7 @@ trait NotificationTrait
      * ```php
      * public function exportForMail() {
      *      return Yii::createObject([
-     *          'class' => 'tuyakhov\notifications\messages\MailMessage',
+     *          'class' => 'makbeth\notifications\messages\MailMessage',
      *          'view' => ['html' => 'welcome'],
      *          'viewData' => [...]
      *      ])

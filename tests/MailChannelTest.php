@@ -3,18 +3,18 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\tests;
+namespace makbeth\notifications\tests;
 
 
-use tuyakhov\notifications\channels\MailChannel;
-use tuyakhov\notifications\messages\MailMessage;
+use makbeth\notifications\channels\MailChannel;
+use makbeth\notifications\messages\MailMessage;
 
 class MailChannelTest extends TestCase
 {
 
     public function testSend() 
     {        
-        $recipient = $this->createMock('tuyakhov\notifications\NotifiableInterface');
+        $recipient = $this->createMock('makbeth\notifications\NotifiableInterface');
         $recipient->expects($this->once())
             ->method('routeNotificationFor')
             ->with('mail')
@@ -38,7 +38,7 @@ class MailChannelTest extends TestCase
             'from' => 'test@admin.com'
         ]);
         
-        $notification = $this->createMock('tuyakhov\notifications\NotificationInterface');
+        $notification = $this->createMock('makbeth\notifications\NotificationInterface');
         $notification->expects($this->once())
             ->method('exportFor')
             ->with('mail')

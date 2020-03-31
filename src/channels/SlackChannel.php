@@ -3,12 +3,12 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\channels;
+namespace makbeth\notifications\channels;
 
 
-use tuyakhov\notifications\messages\SlackMessage;
-use tuyakhov\notifications\NotifiableInterface;
-use tuyakhov\notifications\NotificationInterface;
+use makbeth\notifications\messages\SlackMessage;
+use makbeth\notifications\NotifiableInterface;
+use makbeth\notifications\NotificationInterface;
 use yii\base\Component;
 use yii\di\Instance;
 use yii\helpers\ArrayHelper;

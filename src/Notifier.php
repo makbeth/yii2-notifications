@@ -3,9 +3,9 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications;
-use tuyakhov\notifications\channels\ChannelInterface;
-use tuyakhov\notifications\events\NotificationEvent;
+namespace makbeth\notifications;
+use makbeth\notifications\channels\ChannelInterface;
+use makbeth\notifications\events\NotificationEvent;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
 
@@ -15,7 +15,7 @@ use yii\base\InvalidConfigException;
  * The following example shows how to create a Notifier instance and send your first notification:
  *
  * ```php
- * $notifier = new \tuyakhov\notifications\Notifier([
+ * $notifier = new \makbeth\notifications\Notifier([
  *     'channels' => [...],
  * ]);
  * $notifier->send($recipients, $notifications);
@@ -27,10 +27,10 @@ use yii\base\InvalidConfigException;
  * [
  *      'components' => [
  *          'notifier' => [
- *              'class' => '\tuyakhov\notifications\Notifier',
+ *              'class' => '\makbeth\notifications\Notifier',
  *              'channels' => [
  *                  'mail' => [
- *                      'class' => '\tuyakhov\notifications\channels\MailChannel',
+ *                      'class' => '\makbeth\notifications\channels\MailChannel',
  *                  ]
  *              ],
  *          ],

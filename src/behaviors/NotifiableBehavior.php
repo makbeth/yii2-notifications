@@ -3,12 +3,12 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\behaviors;
+namespace makbeth\notifications\behaviors;
 
 
-use tuyakhov\notifications\NotifiableInterface;
-use tuyakhov\notifications\NotificationInterface;
-use tuyakhov\notifications\Notifier;
+use makbeth\notifications\NotifiableInterface;
+use makbeth\notifications\NotificationInterface;
+use makbeth\notifications\Notifier;
 use yii\base\Behavior;
 use yii\base\Event;
 use yii\di\Instance;
@@ -28,7 +28,7 @@ class NotifiableBehavior extends Behavior
     public function init()
     {
         parent::init();
-        $this->notifier = Instance::ensure($this->notifier, 'tuyakhov\notifications\Notifier');
+        $this->notifier = Instance::ensure($this->notifier, 'makbeth\notifications\Notifier');
     }
 
     /**

@@ -3,7 +3,7 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications\migrations;
+namespace makbeth\notifications\migrations;
 
 use yii\db\Migration;
 

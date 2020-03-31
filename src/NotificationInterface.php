@@ -3,10 +3,10 @@
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
 
-namespace tuyakhov\notifications;
+namespace makbeth\notifications;
 
 
-use tuyakhov\notifications\messages\AbstractMessage;
+use makbeth\notifications\messages\AbstractMessage;
 
 interface NotificationInterface
 {

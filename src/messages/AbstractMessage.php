@@ -2,7 +2,7 @@
 /**
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
-namespace tuyakhov\notifications\messages;
+namespace makbeth\notifications\messages;
 
 
 use yii\base\BaseObject;

@@ -2,10 +2,10 @@
 /**
  * @copyright Anton Tuyakhov <atuyakhov@gmail.com>
  */
-namespace tuyakhov\notifications\tests;
+namespace makbeth\notifications\tests;
 
-use tuyakhov\notifications\events\NotificationEvent;
-use tuyakhov\notifications\Notifier;
+use makbeth\notifications\events\NotificationEvent;
+use makbeth\notifications\Notifier;
 
 class NotifierTest extends TestCase
 {
@@ -20,7 +20,7 @@ class NotifierTest extends TestCase
         $this->notifier = \Yii::createObject([
             'class' => Notifier::className(),
             'channels' => [
-                'mockChannel' => $this->createMock('tuyakhov\notifications\channels\ChannelInterface')
+                'mockChannel' => $this->createMock('makbeth\notifications\channels\ChannelInterface')
             ]
         ]);
     }
@@ -28,10 +28,10 @@ class NotifierTest extends TestCase
 
     public function testSend()
     {
-        $notification = $this->createMock('tuyakhov\notifications\NotificationInterface');
+        $notification = $this->createMock('makbeth\notifications\NotificationInterface');
         $notification->method('broadcastOn')->willReturn(['mockChannel']);
         
-        $recipient = $this->createMock('tuyakhov\notifications\NotifiableInterface');
+        $recipient = $this->createMock('makbeth\notifications\NotifiableInterface');
         $recipient->method('shouldReceiveNotification')->willReturn(true);
         $recipient->method('viaChannels')->willReturn(['mockChannel']);
         
@@ -47,8 +47,8 @@ class NotifierTest extends TestCase
 
         $this->notifier->send($recipient, $notification);
         $this->assertNotEmpty($eventRaised);
-        $this->assertInstanceOf('tuyakhov\notifications\NotificationInterface', $eventRaised->notification);
-        $this->assertInstanceOf('tuyakhov\notifications\NotifiableInterface', $eventRaised->recipient);
+        $this->assertInstanceOf('makbeth\notifications\NotificationInterface', $eventRaised->notification);
+        $this->assertInstanceOf('makbeth\notifications\NotifiableInterface', $eventRaised->recipient);
         $this->assertEquals('mockChannel', $eventRaised->channel);
     }
 }
